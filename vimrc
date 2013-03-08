@@ -104,7 +104,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Set the command window height to 2 lines, to avoid many cases of having to 'press <Enter> to continue'
-set cmdheight=2
+set cmdheight=1
 
 " status line
 set laststatus=2
@@ -138,6 +138,8 @@ Bundle 'Lokaltog/vim-powerline'
 
 " git support
 Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+highlight clear SignColumn
 
 " Use Q for formatting the current paragraph (or selection)
 vmap Q gq
