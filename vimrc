@@ -11,9 +11,8 @@ nnoremap ; :
 " change the mapleader from \ to ,
 let mapleader=","
 
-" command history and undo length
+" command history
 set history=800
-set undolevels=800
 
 " change the terminal's title
 set title
@@ -153,4 +152,9 @@ map <C-l> <C-w>l
 
 " file browser
 Bundle 'git://git.wincent.com/command-t.git'
+
+" undo
+set undolevels=800
+map <C-Z> u
+map! <C-Z> <C-O>u
 
