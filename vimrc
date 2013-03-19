@@ -159,5 +159,5 @@ map <C-Z> u
 map! <C-Z> <C-O>u
 
 " show vim filename in Konsole header
-autocmd BufReadPost * :silent !dcop $KONSOLE_DCOP_SESSION renameSession %
-autocmd VimLeavePre * :silent !dcop $KONSOLE_DCOP_SESSION renameSession $PWD
+autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
+autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 $PWD
