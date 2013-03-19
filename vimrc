@@ -158,3 +158,6 @@ set undolevels=800
 map <C-Z> u
 map! <C-Z> <C-O>u
 
+" show vim filename in Konsole header
+autocmd BufReadPost * :silent !dcop $KONSOLE_DCOP_SESSION renameSession %
+autocmd VimLeavePre * :silent !dcop $KONSOLE_DCOP_SESSION renameSession $PWD
