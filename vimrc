@@ -121,8 +121,12 @@ nnoremap <C-L> :nohl<CR><C-L>
 set mouse=a
 
 " static line break indicator
-set colorcolumn=80
-highlight ColorColumn ctermbg=233 guibg=#121212
+if exists('+colorcolumn')
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=233 guibg=#121212
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " copy and paste
 set clipboard=unnamedplus
