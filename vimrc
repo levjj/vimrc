@@ -158,6 +158,7 @@ nmap <C-l> :tabn<CR>
 imap <C-h> <Esc>:tabp<CR>i
 imap <C-l> <Esc>:tabn<CR>i
 set showtabline=2
+set switchbuf=usetab,newtab
 
 " easy window navigation
 nmap <tab> :wincmd w<CR>
