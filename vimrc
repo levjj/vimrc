@@ -171,6 +171,11 @@ map <C-e> ,t
 let g:CommandTAcceptSelectionMap=[]
 let g:CommandTAcceptSelectionTabMap=['<CR>']
 
+" man pages
+source $VIMRUNTIME/ftplugin/man.vim
+nmap K :Man <cword><CR>:wincmd T<CR>
+let $MANPAGER=''
+
 " undo
 set undolevels=800
 map <C-Z> u
