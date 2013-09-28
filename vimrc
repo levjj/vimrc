@@ -172,6 +172,10 @@ set undolevels=800
 map <C-Z> u
 map! <C-Z> <C-O>u
 
+" save with ctrl+s
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>i
+
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
 autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 $PWD
