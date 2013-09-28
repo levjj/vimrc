@@ -159,8 +159,11 @@ imap <C-h> <Esc>:tabp<CR>i
 imap <C-l> <Esc>:tabn<CR>i
 set showtabline=2
 
-" Easy window navigation
+" easy window navigation
 nmap <tab> :wincmd w<CR>
+
+" open current window as tab
+nmap <C-p> :wincmd T<CR>
 
 " file browser
 Bundle 'git://git.wincent.com/command-t.git'
