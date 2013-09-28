@@ -157,6 +157,7 @@ nmap <C-h> :tabp<CR>
 nmap <C-l> :tabn<CR>
 imap <C-h> <Esc>:tabp<CR>i
 imap <C-l> <Esc>:tabn<CR>i
+set showtabline=2
 
 " Easy window navigation
 nmap <tab> :wincmd w<CR>
