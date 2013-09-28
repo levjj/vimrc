@@ -163,6 +163,9 @@ nmap <tab> :wincmd w<CR>
 
 " file browser
 Bundle 'git://git.wincent.com/command-t.git'
+map <C-e> ,t
+let g:CommandTAcceptSelectionMap=[]
+let g:CommandTAcceptSelectionTabMap=['<CR>']
 
 " undo
 set undolevels=800
