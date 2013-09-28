@@ -148,6 +148,16 @@ highlight clear SignColumn
 vmap Q gq
 nmap Q gqap
 
+" tabs
+nmap <C-w> :tabclose<CR>
+nmap <C-t> :tabnew<CR>
+imap <C-w> <Esc>:tabclose<CR>i
+imap <C-t> <Esc>:tabnew<CR>
+nmap <C-h> :tabp<CR>
+nmap <C-l> :tabn<CR>
+imap <C-h> <Esc>:tabp<CR>i
+imap <C-l> <Esc>:tabn<CR>i
+
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
