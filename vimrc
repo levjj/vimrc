@@ -191,7 +191,7 @@ let NERDTreeChDirMode=2
 let g:nerdtree_tabs_open_on_gui_startup=0
 
 " better Syntax checking
-Bundle 'Syntastic'
+Bundle 'scrooloose/syntastic'
 
 " man pages
 source $VIMRUNTIME/ftplugin/man.vim
