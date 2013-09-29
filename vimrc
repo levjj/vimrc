@@ -181,6 +181,15 @@ map <C-e> ,t
 let g:CommandTAcceptSelectionMap=[]
 let g:CommandTAcceptSelectionTabMap=['<CR>']
 
+" The NERD Tree
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+nnoremap <C-n> :NERDTreeTabsToggle<CR>
+let NERDTreeMinimalUI=1
+let NERDTreeMouseMode=3
+let NERDTreeChDirMode=2
+let g:nerdtree_tabs_open_on_gui_startup=0
+
 " better Syntax checking
 Bundle 'Syntastic'
 
