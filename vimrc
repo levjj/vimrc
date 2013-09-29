@@ -181,6 +181,9 @@ map <C-e> ,t
 let g:CommandTAcceptSelectionMap=[]
 let g:CommandTAcceptSelectionTabMap=['<CR>']
 
+" better Syntax checking
+Bundle 'Syntastic'
+
 " man pages
 source $VIMRUNTIME/ftplugin/man.vim
 nmap K :Man <cword><CR>:wincmd T<CR>
