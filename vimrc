@@ -149,7 +149,15 @@ vmap Q gq
 nmap Q gqap
 
 " tabs
-nmap <C-w> :tabclose<CR>
+nnoremap <C-w> :QuitTab<CR>
+command! QuitTab call s:QuitTab()
+function! s:QuitTab()
+  try
+    tabclose
+  catch /E784/ " Can't close last tab
+    qall
+  endtry
+endfunction
 nmap <C-t> :tabnew<CR>
 imap <C-w> <Esc>:tabclose<CR>i
 imap <C-t> <Esc>:tabnew<CR>
