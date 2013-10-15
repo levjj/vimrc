@@ -86,11 +86,9 @@ map n nzz
 autocmd FileType tex setlocal spell cc=0
 
 " highlight extra whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWritePost * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " write file as sudo
