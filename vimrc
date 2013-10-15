@@ -205,6 +205,9 @@ map! <C-Z> <C-O>u
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>i
 
+" embedded shell
+Bundle 'lrvick/Conque-Shell'
+
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
 autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 $PWD
