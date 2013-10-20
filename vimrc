@@ -209,11 +209,14 @@ inoremap <C-s> <Esc>:w<CR>i
 Bundle 'lrvick/Conque-Shell'
 nnoremap <C-b> :ConqueTermTab bash<CR>
 
-" Surround plugin
+" surround plugin
 Bundle 'tpope/vim-surround'
 
-" Comment/uncomment lines
+" comment/uncomment lines
 Bundle 'tpope/vim-commentary'
+
+" tabularize
+Bundle 'godlygeek/tabular'
 
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
