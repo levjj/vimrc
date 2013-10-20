@@ -209,6 +209,9 @@ inoremap <C-s> <Esc>:w<CR>i
 Bundle 'lrvick/Conque-Shell'
 nnoremap <C-b> :ConqueTermTab bash<CR>
 
+" Surround plugin
+Bundle 'tpope/vim-surround'
+
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
 autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 $PWD
