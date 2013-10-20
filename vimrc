@@ -12,7 +12,7 @@ nnoremap ; :
 let mapleader=","
 
 " command history
-set history=800
+set history=8000
 
 " change the terminal's title
 set title
