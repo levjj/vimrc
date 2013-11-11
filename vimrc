@@ -75,8 +75,8 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 " make Y behave like the other capitals
 map Y y$
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <C-L> :nohl<CR><C-L>
+" <Ctrl-M> redraws the screen and removes any search highlighting.
+nnoremap <C-M> :nohl<CR><C-M>
 
 " n-ext result when search is automatically centered
 map N Nzz
