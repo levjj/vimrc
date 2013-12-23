@@ -77,7 +77,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 map Y y$
 
 " <Ctrl-M> redraws the screen and removes any search highlighting.
-nnoremap <C-M> :nohl<CR><C-M>
+nnoremap <C-M> :nohl<CR>:GhcModTypeClear<CR><C-L>
 
 " n-ext result when search is automatically centered
 map N Nzz
@@ -219,3 +219,7 @@ Bundle 'godlygeek/tabular'
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
 autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 $PWD
+
+" haskell
+Bundle 'ghcmod'
+nnoremap T :GhcModType<CR>
