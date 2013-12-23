@@ -216,6 +216,9 @@ Bundle 'tpope/vim-commentary'
 " tabularize
 Bundle 'godlygeek/tabular'
 
+" autocompletion
+Bundle 'Valloric/YouCompleteMe'
+
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
 autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 $PWD
