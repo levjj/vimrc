@@ -6,7 +6,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-nnoremap ; :
+" vimproc
+Bundle 'Shougo/vimproc.vim'
 
 " change the mapleader from \ to ,
 let mapleader=","
