@@ -226,3 +226,6 @@ autocmd VimLeavePre * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION
 " haskell
 Bundle 'ghcmod'
 nnoremap T :GhcModType<CR>
+
+"remove toolbar in gvim
+set guioptions-=T
