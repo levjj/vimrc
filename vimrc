@@ -229,3 +229,6 @@ nnoremap T :GhcModType<CR>
 
 "remove toolbar in gvim
 set guioptions-=T
+
+"support for editor config
+Bundle 'editorconfig/editorconfig-vim'
