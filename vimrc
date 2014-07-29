@@ -29,6 +29,8 @@ filetype indent plugin on
 syntax on
 Bundle 'jakar/vim-json'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mustache/vim-mustache-handlebars'
+au BufRead,BufNewFile *.hbs setfiletype mustache
 
 " color theme
 set t_Co=256
