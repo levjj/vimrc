@@ -40,6 +40,11 @@ colorscheme vividchalk
 " auto-update files that changed outside vim
 set autoread
 
+" jump to previous cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 " auto-completing for commands
 set wildmenu
 set wildmode=list:longest,full
