@@ -25,3 +25,4 @@ augroup coffee_autocmd
 	autocmd FileType coffee set expandtab
 augroup END
 
+au! BufRead,BufNewFile *.md set filetype=markdown

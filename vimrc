@@ -19,9 +19,12 @@ set history=8000
 set title
 
 " auto-indent
+set smartindent
 set shiftround
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
+set smarttab
 set expandtab
 filetype indent plugin on
 
