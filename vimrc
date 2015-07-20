@@ -33,6 +33,7 @@ syntax on
 Bundle 'jakar/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'othree/yajs.vim'
 au BufRead,BufNewFile *.hbs setfiletype mustache
 
 " color theme
