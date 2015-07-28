@@ -30,11 +30,12 @@ filetype indent plugin on
 
 " syntax highlighting
 syntax on
+Bundle 'scrooloose/syntastic'
+let g:syntastic_javascript_checkers = ['eslint']
 Bundle 'jakar/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'othree/yajs.vim'
-au BufRead,BufNewFile *.hbs setfiletype mustache
 
 " color theme
 set t_Co=256
@@ -197,9 +198,6 @@ let NERDTreeMouseMode=3
 let NERDTreeChDirMode=2
 let g:nerdtree_tabs_open_on_gui_startup=0
 
-" better Syntax checking
-Bundle 'scrooloose/syntastic'
-
 " man pages
 source $VIMRUNTIME/ftplugin/man.vim
 nmap K :Man <cword><CR>:wincmd T<CR>
@@ -229,6 +227,8 @@ Bundle 'godlygeek/tabular'
 
 " autocompletion
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
+set completeopt-=preview
 
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
@@ -240,6 +240,9 @@ nnoremap T :GhcModType<CR>
 
 "remove toolbar in gvim
 set guioptions-=T
+if has('gui_running')
+  set guifont=Inconsolata\ Medium\ 10
+endif
 
 "support for editor config
 Bundle 'editorconfig/editorconfig-vim'
