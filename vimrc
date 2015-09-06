@@ -36,6 +36,7 @@ Bundle 'jakar/vim-json'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'othree/yajs.vim'
+Bundle 'ekalinin/Dockerfile.vim'
 
 " color theme
 set t_Co=256

@@ -30,3 +30,5 @@ au! BufRead,BufNewFile *.smt set filetype=scheme
 au! BufRead,BufNewFile *.md set filetype=markdown
 
 au! BufRead,BufNewFile *.hbs set filetype=mustache
+
+au! BufRead,BufNewFile Dockerfile set filetype=Dockerfile
