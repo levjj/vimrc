@@ -227,9 +227,26 @@ Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
 
 " autocompletion
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'Shougo/neocomplete'
+let g:acp_enableAtStartup = 0 " Disable AutoComplPop.
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+if has("gui_running")
+  hi Pmenu     guibg=#686868
+  hi PmenuSel  guibg=#B26818
+  hi PmenuSbar guibg=#000000
+else
+  hi Pmenu     ctermbg=8
+  hi PmenuSel  ctermbg=3
+  hi PmenuSbar ctermbg=0
+endif
 Bundle 'marijnh/tern_for_vim'
-set completeopt-=preview
 
 " show vim filename in Konsole header
 autocmd BufReadPost * :silent !qdbus $KONSOLE_DBUS_SERVICE $KONSOLE_DBUS_SESSION setTitle 1 %:p
