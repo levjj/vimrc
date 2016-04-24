@@ -37,6 +37,11 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'othree/yajs.vim'
 Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'leafgarland/typescript-vim'
+let g:tsuquyomi_disable_default_mappings = 1
+let g:tsuquyomi_disable_quickfix = 1
+Bundle 'Quramy/tsuquyomi'
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
 
 " color theme
 set t_Co=256
@@ -237,6 +242,11 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType typescript set omnifunc=tsuquyomi#complete
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
 if has("gui_running")
   hi Pmenu     guibg=#686868
   hi PmenuSel  guibg=#B26818

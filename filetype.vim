@@ -16,7 +16,6 @@ au! BufRead,BufNewFile *.json set filetype=json
 augroup json_autocmd
   autocmd!
   autocmd FileType json set autoindent
-  autocmd FileType json set foldmethod=syntax
 augroup END
 
 au! BufRead,BufNewFile *.coffee set filetype=coffee
@@ -32,3 +31,9 @@ au! BufRead,BufNewFile *.md set filetype=markdown
 au! BufRead,BufNewFile *.hbs set filetype=mustache
 
 au! BufRead,BufNewFile Dockerfile set filetype=Dockerfile
+
+au! BufRead,BufNewFile *.ts set filetype=typescript
+augroup typescript_autocmd
+  autocmd FileType typescript set shiftwidth=2
+	autocmd FileType typescript set expandtab
+augroup END
