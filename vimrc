@@ -42,6 +42,7 @@ let g:tsuquyomi_disable_default_mappings = 1
 let g:tsuquyomi_disable_quickfix = 1
 Bundle 'Quramy/tsuquyomi'
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
+Bundle 'raichoo/smt-vim'
 
 " color theme
 set t_Co=256
