@@ -37,3 +37,5 @@ augroup typescript_autocmd
   autocmd FileType typescript set shiftwidth=2
 	autocmd FileType typescript set expandtab
 augroup END
+
+au! BufRead,BufNewFile *.dfy set filetype=dafny
