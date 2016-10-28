@@ -39,3 +39,5 @@ augroup typescript_autocmd
 augroup END
 
 au! BufRead,BufNewFile *.dfy set filetype=dafny
+
+au! BufRead,BufNewFile *.nun set filetype=nunchaku

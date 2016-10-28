@@ -44,6 +44,7 @@ Bundle 'Quramy/tsuquyomi'
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
 Bundle 'raichoo/smt-vim'
 Bundle 'mlr-msft/vim-loves-dafny'
+Bundle 'nunchaku-inria/vim-nunchaku'
 
 " color theme
 set t_Co=256
@@ -212,7 +213,7 @@ nmap K :Man <cword><CR>:wincmd T<CR>
 let $MANPAGER=''
 
 " undo
-set undolevels=800
+set undolevels=100000
 map <C-Z> u
 map! <C-Z> <C-O>u
 
