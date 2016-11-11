@@ -31,6 +31,8 @@ filetype indent plugin on
 " syntax highlighting
 syntax on
 Bundle 'scrooloose/syntastic'
+let g:syntastic_c_compiler_options = '-std=gnu11'
+let g:syntastic_cpp_compiler_options = '-std=gnu++14'
 let g:syntastic_javascript_checkers = ['eslint']
 Bundle 'jakar/vim-json'
 Bundle 'kchmck/vim-coffee-script'
