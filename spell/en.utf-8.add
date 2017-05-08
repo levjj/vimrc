@@ -9,3 +9,7 @@ virtualization
 overapproximates
 Inlining
 underapproximate
+essentiality
+subtyping
+inlining
+asynchronicity

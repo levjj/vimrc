@@ -44,6 +44,7 @@ Bundle 'Quramy/tsuquyomi'
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
 Bundle 'raichoo/smt-vim'
 Bundle 'mlr-msft/vim-loves-dafny'
+let g:syntastic_dafny_checkers = ['dafny']
 Bundle 'nunchaku-inria/vim-nunchaku'
 
 " color theme
@@ -178,8 +179,12 @@ endfunction
 nmap <C-t> :tabnew<CR>
 imap <C-w> <Esc>:tabclose<CR>i
 imap <C-t> <Esc>:tabnew<CR>
-nmap <C-h> :tabp<CR>
-nmap <C-l> :tabn<CR>
+nmap <C-j> :tabp<CR>
+nmap <C-k> :tabn<CR>
+nmap <C-h> B
+nmap <C-l> W
+vmap <C-h> B
+vmap <C-l> W
 imap <C-h> <Esc>:tabp<CR>i
 imap <C-l> <Esc>:tabn<CR>i
 set showtabline=2
