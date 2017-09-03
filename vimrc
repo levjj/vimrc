@@ -44,7 +44,7 @@ let g:tsuquyomi_disable_default_mappings = 1
 let g:tsuquyomi_disable_quickfix = 1
 Bundle 'Quramy/tsuquyomi'
 let g:syntastic_typescript_checkers = ['tsuquyomi', 'eslint']
-Bundle 'raichoo/smt-vim'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mlr-msft/vim-loves-dafny'
 let g:syntastic_dafny_checkers = ['dafny']
 Bundle 'nunchaku-inria/vim-nunchaku'
@@ -296,3 +296,8 @@ if has('persistent_undo')
     let &undodir = myUndoDir
     set undofile
 endif
+
+" Some one-key macros
+nnoremap <C-k1> @1
+nnoremap <C-k2> @2
+nnoremap <C-k3> @3
